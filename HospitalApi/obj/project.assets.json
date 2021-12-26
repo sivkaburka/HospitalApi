@@ -5976,11 +5976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Aleksander\\test\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
+      "projectUniqueName": "D:\\Aleksander\\test\\GitHub\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
       "projectName": "HospitalApi",
-      "projectPath": "D:\\Aleksander\\test\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
+      "projectPath": "D:\\Aleksander\\test\\GitHub\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
       "packagesPath": "C:\\Users\\sivka\\.nuget\\packages\\",
-      "outputPath": "D:\\Aleksander\\test\\HospitalApi\\HospitalApi\\obj\\",
+      "outputPath": "D:\\Aleksander\\test\\GitHub\\HospitalApi\\HospitalApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

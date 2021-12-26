@@ -1,4 +1,5 @@
 ﻿using HospitalApi.Domain.Models;
+using HospitalApi.Domain.Models.Queries;
 using HospitalApi.Domain.Services.Communication;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace HospitalApi.Domain.Services
 {
     public interface IDoctorService
     {
-        Task<IEnumerable<Doctor>> ListAsync();
+        Task<QueryResult<Doctor>> ListAsync(Query query);
         Task<Doctor> FindByIdAsync(int id);
         Task<DoctorResponse> AddAsync(Doctor doctor);
         Task<DoctorResponse> UpdateAsync(int id, Doctor doctor);

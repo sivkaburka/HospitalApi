@@ -1,4 +1,5 @@
 ﻿using HospitalApi.Domain.Models;
+using HospitalApi.Domain.Models.Queries;
 using HospitalApi.Domain.Repositories;
 using HospitalApi.Domain.Services;
 using HospitalApi.Domain.Services.Communication;
@@ -18,9 +19,9 @@ namespace HospitalApi.Services
             _patientRepository = patientRepository;
             _unitOfWork = unitOfWork;
         }
-        public async Task<IEnumerable<Patient>> ListAsync()
+        public async Task<QueryResult<Patient>> ListAsync(Query query)
         {
-            return await _patientRepository.ListAsync();
+            return await _patientRepository.ListAsync(query);
         }
         public async Task<Patient> FindByIdAsync(int id)
         {

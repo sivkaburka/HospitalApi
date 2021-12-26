@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HospitalApi.Domain.Services.Communication;
+using HospitalApi.Domain.Models.Queries;
 
 namespace HospitalApi.Services
 {
@@ -19,9 +20,9 @@ namespace HospitalApi.Services
             _unitOfWork = unitOfWork;
 
         }
-        public async Task<IEnumerable<Doctor>> ListAsync()
+        public async Task<QueryResult<Doctor>> ListAsync(Query query)
         {
-            return await _doctorRepository.ListAsync();
+            return await _doctorRepository.ListAsync(query);
         }
         public async Task<Doctor> FindByIdAsync(int id)
         {

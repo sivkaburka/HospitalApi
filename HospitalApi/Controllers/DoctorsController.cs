@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using HospitalApi.Resources;
+using HospitalApi.Domain.Models.Queries;
 
 namespace HospitalApi.Controllers
 {
@@ -24,10 +25,12 @@ namespace HospitalApi.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        public async Task<IEnumerable<DoctorAllResource>> GetAllAsync()
+        [ProducesResponseType(typeof(QueryResultResource<DoctorAllResource>), 200)]
+        public async Task<QueryResultResource<DoctorAllResource>> GetAllAsync([FromQuery] QueryResource query)
         {
-            var doctors = await _doctorService.ListAsync();
-            var resources = _mapper.Map<IEnumerable<Doctor>, IEnumerable<DoctorAllResource>>(doctors);
+            var doctorsQuery = _mapper.Map<QueryResource, Query>(query);
+            var doctors = await _doctorService.ListAsync(doctorsQuery);
+            var resources = _mapper.Map<QueryResult<Doctor>, QueryResultResource<DoctorAllResource>>(doctors);
             return resources;
         }
         [HttpGet("{id}")]

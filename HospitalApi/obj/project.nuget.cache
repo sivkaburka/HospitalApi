@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PMxRyjhmW+KpIJcQn2LrISif5UYrfYAebzW01Qt6ZrzH1G/g8LbiH7RHpoQtHJZ/OWO79rxvqZrGFZMIKB33mw==",
+  "dgSpecHash": "zIBu6ero07YUzFbz78HC7Gljn/K36GpyujCKxFOulOHQfx1M75J45vcnDGlxlzH+OlIFyCAVFsMnbFxysficWQ==",
   "success": true,
-  "projectFilePath": "D:\\Aleksander\\test\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
+  "projectFilePath": "D:\\Aleksander\\test\\GitHub\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sivka\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

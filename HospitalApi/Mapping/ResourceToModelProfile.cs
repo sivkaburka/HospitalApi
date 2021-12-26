@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HospitalApi.Domain.Models;
+using HospitalApi.Domain.Models.Queries;
 using HospitalApi.Resources;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace HospitalApi.Mapping
         {
             CreateMap<AddDoctorResource, Doctor>();
             CreateMap<AddPatientResource, Patient>();
+            CreateMap<QueryResource, Query>();
         }
     }
 }

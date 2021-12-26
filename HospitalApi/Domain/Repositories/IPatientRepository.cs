@@ -1,4 +1,5 @@
 ﻿using HospitalApi.Domain.Models;
+using HospitalApi.Domain.Models.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace HospitalApi.Domain.Repositories
 {
     public interface IPatientRepository
     {
-        Task<IEnumerable<Patient>> ListAsync();
+        Task<QueryResult<Patient>> ListAsync(Query query);
         Task<Patient> FindByIdAsync(int id);
         Task AddAsync(Patient patient);
         void Update(Patient patient);
