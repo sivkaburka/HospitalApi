@@ -42,6 +42,8 @@ For running API DON'T FORGET change Data Base connection string in appsettings.j
 After running API, you can check all requests in Swagger.
 # Request parametrs
 For pagination use property "Page" and "ItemsPerPage".
+
+
 For sorting avaible all fields. Use property "OrderBy" with values, example "LastName" or "AreaNumber", and sort type, "asc' as default, and "desc" for reverse sorting. 
 
 Example:
