@@ -41,11 +41,9 @@ For running API DON'T FORGET change Data Base connection string in appsettings.j
 
 After running API, you can check all requests in Swagger.
 # Request parametrs
-For sorting "Doctors" avaible property "OrderBy" with values "LastName" and "CabinetNumber", for "Patients" - "LastName" and "DateOfBirth". 
-
-Sort type : OrderBy use asc as default, if you want desk, use property "OrderType" with value "desc".
+For sorting avaible all fields. Use property "OrderBy" with values, example "LastName" or "AreaNumber", and sort type, "asc' as default, and "desc" for reverse sorting. 
 
 Example:
 ```
-https://localhost:(your port)/api/Doctors?Page=2&ItemsPerPage=4&OrderBy=LastName&OrderType=desc
+https://localhost:44316/api/Doctors?OrderBy=areanumber%20desc
 ```
