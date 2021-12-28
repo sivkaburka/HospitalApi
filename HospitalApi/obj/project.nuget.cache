@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zIBu6ero07YUzFbz78HC7Gljn/K36GpyujCKxFOulOHQfx1M75J45vcnDGlxlzH+OlIFyCAVFsMnbFxysficWQ==",
+  "dgSpecHash": "WjUc3V3cem2kfmDwTYzq72pMG7z9kQYWT79UD7337fp+Yd9xX4qQWn2nUhS0/b2rOYSc/XsHZxE4V/Fa7r533Q==",
   "success": true,
   "projectFilePath": "D:\\Aleksander\\test\\GitHub\\HospitalApi\\HospitalApi\\HospitalApi.csproj",
   "expectedPackageFiles": [
@@ -64,6 +64,7 @@
     "C:\\Users\\sivka\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\sivka\\.nuget\\packages\\system.linq.dynamic.core\\1.2.15\\system.linq.dynamic.core.1.2.15.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\sivka\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",

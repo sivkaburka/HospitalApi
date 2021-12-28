@@ -18,6 +18,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using HospitalApi.DPersistence.Repositories;
 using Microsoft.OpenApi.Models;
+using HospitalApi.Domain.Models;
+using HospitalApi.Domain.Helpers;
 
 namespace HospitalApi
 {
@@ -47,6 +49,8 @@ namespace HospitalApi
             services.AddScoped<IDoctorService, DoctorService>();
             services.AddScoped<IPatientService, PatientService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ISortHelper<Doctor>, SortHelper<Doctor>>();
+            services.AddScoped<ISortHelper<Patient>, SortHelper<Patient>>();
             services.AddAutoMapper(typeof(Startup));
 
         }

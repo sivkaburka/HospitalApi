@@ -7,13 +7,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HospitalApi.Domain.Models.Queries;
+using HospitalApi.Domain.Helpers;
 
 namespace HospitalApi.Persistence.Repositories
 {
     public class PatientRepository : BaseRepository, IPatientRepository
     {
-        public PatientRepository(AppDbContext context) : base(context)
+        private ISortHelper<Patient> _sortHelper;
+        public PatientRepository(AppDbContext context, ISortHelper<Patient> sortHelper) : base(context)
         {
+            _sortHelper = sortHelper;
         }
 
         public async Task<QueryResult<Patient>> ListAsync(Query query)
@@ -29,56 +32,16 @@ namespace HospitalApi.Persistence.Repositories
                 Gender = x.Gender,
                 AreaNumber = x.Area.Number
             });
-            if (!string.IsNullOrEmpty(query.OrderBy))
-            {
-                switch (query.OrderBy)
-                {
-                    case "LastName":
-                        if (query.OrderType == "desc")
-                        {
-                            queryable = queryable.OrderByDescending(x => x.LastName);                            
-                        }
-                        else
-                        {
-                            queryable = queryable.OrderBy(x => x.LastName);
-                        }
-
-                        break;
-                    case "DateOfBirth":
-                        if (query.OrderType == "desc")
-                        {
-                            queryable = queryable.OrderByDescending(x => x.DateOfBirth);
-                        }
-                        else
-                        {
-                            queryable = queryable.OrderBy(x => x.DateOfBirth);
-                        }
-
-                        break;
-                };
-            };
-            int totalItems = await queryable.CountAsync();
-            List<Patient> products = await queryable.Skip((query.Page - 1) * query.ItemsPerPage)
+            var sortedPatients = _sortHelper.ApplySort(queryable, query.OrderBy);
+            int totalItems = await sortedPatients.CountAsync();
+            List<Patient> products = await sortedPatients.Skip((query.Page - 1) * query.ItemsPerPage)
                                                     .Take(query.ItemsPerPage)
-                                                    .ToListAsync();
-
-            // Finally I return a query result, containing all items and the amount of items in the database (necessary for client-side calculations ).
+                                                    .ToListAsync();            
             return new QueryResult<Patient>
             {
                 Items = products,
                 TotalItems = totalItems,
-            };
-            //return await _context.Patients.Include(x => x.Area).Select(x => new Patient
-            //{
-            //    Id = x.Id,
-            //    FirstName = x.FirstName,
-            //    Patronymic = x.Patronymic,
-            //    LastName = x.LastName,
-            //    Address = x.Address,
-            //    DateOfBirth = x.DateOfBirth,
-            //    Gender = x.Gender,
-            //    AreaNumber = x.Area.Number
-            //}).ToListAsync();
+            };            
         }
         public async Task<Patient> FindByIdAsync(int id)
         {

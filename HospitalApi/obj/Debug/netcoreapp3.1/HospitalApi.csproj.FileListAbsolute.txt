@@ -200,3 +200,4 @@ D:\Aleksander\test\GitHub\HospitalApi\HospitalApi\obj\Debug\netcoreapp3.1\scoped
 D:\Aleksander\test\GitHub\HospitalApi\HospitalApi\obj\Debug\netcoreapp3.1\HospitalApi.RazorTargetAssemblyInfo.cache
 D:\Aleksander\test\GitHub\HospitalApi\HospitalApi\obj\Debug\netcoreapp3.1\HospitalApi.csproj.CopyComplete
 D:\Aleksander\test\GitHub\HospitalApi\HospitalApi\obj\Debug\netcoreapp3.1\HospitalApi.genruntimeconfig.cache
+D:\Aleksander\test\GitHub\HospitalApi\HospitalApi\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll

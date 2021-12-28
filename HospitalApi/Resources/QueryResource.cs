@@ -10,6 +10,5 @@ namespace HospitalApi.Resources
         public int Page { get; set; }
         public int ItemsPerPage { get; set; }
         public string OrderBy { get; set; }
-        public string OrderType { get; set; }
     }
 }
