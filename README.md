@@ -1,5 +1,5 @@
 # HospitalApi
-RESTful API built with ASP.NET Core 3.1 for editing patient and doctor tables.
+RESTful API built with ASP.NET 5 for editing patient and doctor tables.
 # Description of the task:
 Write 2 web api controllers for editing patient and doctor tables.
 
